@@ -12,7 +12,7 @@ public class Student {
     private int quiz3;
     private int exam1;
     private int exam2;
-    private Double average;
+    private Double weightedAvg;
     private Character letterGrade;
 
     public Student(String str) {
@@ -26,11 +26,11 @@ public class Student {
         this.id = tokens[0].trim();
         this.firstName = tokens[1].trim();
         this.lastName = tokens[2].trim();
-        this.quiz1 = Integer.parseInt(tokens[3]);
-        this.quiz2 = Integer.parseInt(tokens[4]);
-        this.quiz3 = Integer.parseInt(tokens[5]);
-        this.exam1 = Integer.parseInt(tokens[6]);
-        this.exam2 = Integer.parseInt(tokens[7]);
+        this.quiz1 = Integer.parseInt(tokens[3].trim());
+        this.quiz2 = Integer.parseInt(tokens[4].trim());
+        this.quiz3 = Integer.parseInt(tokens[5].trim());
+        this.exam1 = Integer.parseInt(tokens[6].trim());
+        this.exam2 = Integer.parseInt(tokens[7].trim());
     }
 
     public Student(String id, String firstName, String lastName, int quiz1, int quiz2, int quiz3, int exam1,
@@ -43,6 +43,13 @@ public class Student {
         this.quiz3 = quiz3;
         this.exam1 = exam1;
         this.exam2 = exam2;
+    }
+
+    public String toString() {
+        // Note: to print a '%' you need to give '%%', '%s' for string, '%d' for digit,
+        // '%f' for flooding point number
+        return String.format("Id: %s : quizzes (%d, %d, %d), exams (%d, %d), grade: %2f%% = %c", this.id, this.quiz1,
+                this.quiz2, this.quiz3, this.exam1, this.exam2, this.weightedAvg, this.letterGrade);
     }
 
     public String getId() {
