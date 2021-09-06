@@ -4,18 +4,13 @@ Make sure you are at `java-tutorial`
 ```
 $ pwd
 # expected to see .../java-tutorial
-$ javac exercise/exercise01/IOExercise.java
+$ javac exercise/exercise02/FileIOExercise.java
 # this will compile the class, and others required classes
-$ java exercise.exercise01.IOExercise
+$ java exercise.exercise02.FileIOExercise ./exercise/exercise02/test.csv 
 ```
 
-## Note
 Later on when you learn how to use VS Code or other IDE, you can run the code directly on your IDE.
 
 Also, this is a very simple way create a Java program.
 
 In the future, you will learn how to use Maven or Gradle to create a Java project.
-
-# Agenda
-You will learn very basic IO (input output) in Java.
-Read user input and print on console.

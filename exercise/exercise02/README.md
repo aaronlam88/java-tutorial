@@ -9,8 +9,11 @@ $ javac exercise/exercise02/FileIOExercise.java
 $ java exercise.exercise02.FileIOExercise ./exercise/exercise02/test.csv 
 ```
 
+## Note
 Later on when you learn how to use VS Code or other IDE, you can run the code directly on your IDE.
 
 Also, this is a very simple way create a Java program.
 
 In the future, you will learn how to use Maven or Gradle to create a Java project.
+
+# Agenda
