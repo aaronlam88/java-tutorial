@@ -2,10 +2,20 @@ package lesson.lesson02;
 
 public class VariableType {
     private static void learnAboutNumber() {
-        int num1 = 5; // from -2^31 to 2^31 - 1; See Integer as well
-        long num2 = -1234567890; // from -2^63 to 2^63 - 1; See Long as well
-        float num3 = 5.2;
-        double num4;
+        // For number without decimal points, use int if you know that your number will
+        // be small, else use long
+        int num1 = 5; // 4 bytes (32 bits), from -2^31 to 2^31 - 1; Primitive type for Integer
+        long num2 = 9223372036854775807l; // 8 bytes(64 bits) from -2^63 to 2^63 - 1; Primitive type for Long
+        // For factional number, I usually use double and rarely use float
+        float num3 = 5.2f; // 4 bytes (32 bits), 6 to 7 decimal digits; Primitive type for Float
+        double num4 = 3.1415; // 8 bytes(64 bits), 15 to 16 decimal points; Primitive type for Double
+
+        // Type casting, long is too big for int, will overflow and give you incorrect
+        // result
+        num1 = (int) num2;
+        System.out.println(String.format("num1: %d | num2: %d", num1, num2));
+        // Arithmetic: smaller type will be converted to the larger type
+
     }
 
     // Learn about String
@@ -40,5 +50,6 @@ public class VariableType {
 
     public static void main(String[] args) {
         learnAboutString();
+        learnAboutNumber();
     }
 }
